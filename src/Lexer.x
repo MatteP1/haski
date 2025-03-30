@@ -1,5 +1,5 @@
 {
-module Lexer (scanTokens) where
+module Lexer where
 }
 
 %wrapper "basic"
@@ -8,11 +8,11 @@ ski :-
 
   $white+                       ;
   "--".*                        ;
-  S                             { \s -> TokenS }
-  K                             { \s -> TokenK }
-  I                             { \s -> TokenI }
-  \(                            { \s -> TokenLParen }
-  \)                            { \s -> TokenRParen }
+  S                             { \_ -> TokenS }
+  K                             { \_ -> TokenK }
+  I                             { \_ -> TokenI }
+  \(                            { \_ -> TokenLParen }
+  \)                            { \_ -> TokenRParen }
 {
 
 -- The token type:

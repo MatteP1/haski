@@ -69,9 +69,12 @@ library
     -- other-extensions:
 
     -- Other library packages from which modules are imported.
-    build-depends:    base ^>=4.20.0.0
+    build-depends:    base ^>=4.20.0.0,
+                      array
 
-    build-tools:      alex, happy
+    build-tool-depends:
+                      alex:alex,
+                      happy:happy
 
     -- Directories containing source files.
     hs-source-dirs:   src
@@ -102,8 +105,6 @@ executable haski
 
     -- Base language which the package is written in.
     default-language: GHC2024
-
-    build-tools
 
 test-suite haski-test
     -- Import common warning flags.
