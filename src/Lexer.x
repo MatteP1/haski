@@ -8,9 +8,9 @@ ski :-
 
   $white+                       ;
   "--".*                        ;
-  S                             { \_ -> TokenS }
-  K                             { \_ -> TokenK }
-  I                             { \_ -> TokenI }
+  [Ss]                          { \_ -> TokenS }
+  [Kk]                          { \_ -> TokenK }
+  [Ii]                          { \_ -> TokenI }
   \(                            { \_ -> TokenLParen }
   \)                            { \_ -> TokenRParen }
 {

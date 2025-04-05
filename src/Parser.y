@@ -1,6 +1,7 @@
 {
 module Parser where
 import Lexer
+import Ast
 }
 
 %name parseSKI
@@ -30,6 +31,4 @@ Term : S            { S }
 parseError :: [Token] -> a
 parseError _ = error "Parse error"
 
-data Term = S | K | I | App Term Term
-          deriving Show
 }
